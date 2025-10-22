@@ -49,7 +49,7 @@ export default function Home() {
           >
             What's up, I'm{" "}
             <span className="bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent">
-              Sami 
+              Sami
             </span>
           </motion.h2>
 
@@ -60,7 +60,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            “Turning code into creativity and ideas into software.”
+            "Turning code into creativity and ideas into software."
           </motion.p>
 
           {/* Subtext */}
@@ -70,7 +70,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            I’m a Computer Science student who enjoys solving problems, creating cool projects, and learning something new with every line of code. I’m constantly exploring new ways to improve my skills, challenge myself, and build projects I’m proud of.
+            I'm a Computer Science student who enjoys solving problems, creating cool projects, and learning something new with every line of code. I'm constantly exploring new ways to improve my skills, challenge myself, and build projects I'm proud of.
           </motion.p>
 
           {/* Tech Stack Icons with Brand Colors */}
@@ -115,7 +115,7 @@ export default function Home() {
           <div className="bg-black/60 backdrop-blur-md border-2 border-pink-500/40 rounded-xl p-8 shadow-[0_0_25px_#e60000a0] transition hover:scale-105">
             <h3 className="text-pink-400 font-bold mb-3 text-2xl tracking-wide">🎓 STUDENT</h3>
             <p className="text-gray-300 text-base leading-relaxed">
-              I am curently a 4th-Year Computer Science major.
+              I am currently a 4th-Year Computer Science major.
             </p>
           </div>
 
@@ -131,7 +131,7 @@ export default function Home() {
           <div className="bg-black/60 backdrop-blur-md border-2 border-pink-500/40 rounded-xl p-8 shadow-[0_0_25px_#e60000a0] transition hover:scale-105">
             <h3 className="text-pink-400 font-bold mb-3 text-2xl tracking-wide">🚀 GOALS</h3>
             <p className="text-gray-300 text-base leading-relaxed">
-              Actively seeking a software engineering internship so i can apply my skills and grow professionally.
+              Actively seeking a software engineering internship so I can apply my skills and grow professionally.
             </p>
           </div>
         </motion.div>
