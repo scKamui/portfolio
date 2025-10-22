@@ -10,7 +10,7 @@ export default function About() {
       <Navbar />
 
       {/* === Main Section === */}
-      <main className="flex flex-col md:flex-row items-center justify-center gap-12 px-6 sm:px-10 md:px-16 lg:px-24 py-20 flex-grow w-full">
+      <main className="flex flex-col md:flex-row items-center justify-center gap-12 px-6 sm:px-10 md:px-16 lg:px-24 py-20 pb-40 flex-grow w-full">
         {/* === Left: Text Content === */}
         <motion.div
           className="flex-1 max-w-2xl text-center md:text-left w-full"
@@ -66,7 +66,7 @@ export default function About() {
           </motion.a>
         </motion.div>
 
-        {/* === Right: Coding Image === */}
+        {/* === Right: Dynamic Image === */}
         <motion.div
           className="flex-1 flex justify-center w-full max-w-md md:max-w-lg lg:max-w-xl"
           initial={{ opacity: 0, x: 40 }}
