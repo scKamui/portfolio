@@ -39,12 +39,19 @@ export default function About() {
             make a difference in how we solve problems.
           </p>
 
+          {/* === Updated Hobby Section === */}
           <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mb-6">
-            Outside of coding, I like staying active — I’ve trained{" "}
-            <span className="text-pink-500 font-semibold">Brazilian Jiu-Jitsu</span>, hit the gym,
-            and enjoy watching <span className="text-pink-500 font-semibold">UFC</span> and{" "}
-            <span className="text-pink-500 font-semibold">football</span>. I’m always working on
-            improving mentally, physically, and professionally.
+            Outside of coding, I have a few hobbies that keep me grounded and motivated. I like
+            going to the <span className="text-pink-500 font-semibold">gym</span> consistently
+            because it helps me feel good, stay focused, and build the kind of discipline that
+            carries over into everything I do.
+          </p>
+
+          <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mb-6">
+            I’m also a big fan of watching <span className="text-pink-500 font-semibold">UFC</span> — 
+            I love seeing the strategy, mindset, and intensity behind every fight. Lately, I’ve also
+            become a new fan of <span className="text-pink-500 font-semibold">American football</span>, 
+            and I’ve really enjoyed learning more about the game and following it each season.
           </p>
 
           <p className="text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed mb-10">
