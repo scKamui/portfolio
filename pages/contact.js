@@ -5,10 +5,10 @@ import Footer from "@/components/footer";
 
 export default function Contact() {
   return (
-    <div className="bg-gradient-to-b from-gray-900 via-black to-gray-900 min-h-screen text-white">
+    <div className="bg-gradient-to-b from-gray-900 via-black to-gray-900 min-h-screen text-white flex flex-col">
       <Navbar />
 
-      <main className="flex flex-col items-center justify-center text-center px-6 py-20">
+      <main className="flex flex-col items-center justify-center text-center px-6 py-20 pb-40 flex-grow">
         {/* Heading */}
         <motion.h1
           className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent"
@@ -37,7 +37,7 @@ export default function Contact() {
           transition={{ delay: 0.5, duration: 0.6 }}
         >
           <form
-            action="https://formspree.io/f/mnqekvvg"
+            action="https://formspree.io/f/mpwygwdd"
             method="POST"
             className="flex flex-col space-y-5"
           >
@@ -83,13 +83,14 @@ export default function Contact() {
         >
           or reach me directly at{" "}
           <a
-            href="mailto:sami.chauhan@example.com"
+            href="mailto:sjsc1224@gmail.com"
             className="text-red-500 hover:text-red-400"
           >
             sjsc1224@gmail.com
           </a>
         </motion.p>
       </main>
+
       <Footer />
     </div>
   );
