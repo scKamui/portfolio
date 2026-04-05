@@ -27,6 +27,13 @@ export default function Projects() {
       tech: "PHP, MySQL, HTML, CSS",
       link: "https://github.com/scKamui/SportsPro-Technical-Support-System",
     },
+    {
+     title: "Highway Escape",
+     description:
+     "An Android game where players dodge traffic and survive as long as possible, featuring collision detection, smooth movement, and real-time gameplay mechanics.",
+    tech: "Java, Android Studio, Android SDK",
+    link: "https://github.com/scKamui/highway-escape-android",
+    },
   ];
 
   return (
