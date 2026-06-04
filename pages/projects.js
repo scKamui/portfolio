@@ -7,6 +7,13 @@ import Footer from "@/components/footer";
 export default function Projects() {
   const projects = [
     {
+      title: "Subject Zero",
+      description:
+        "A 2D zombie survival game built in Unity where players battle waves of enemies, complete objectives, and progress through the story. Features multiple zombie types, AI-driven enemy behavior, anti-clustering movement, wave progression, ranking systems, and survival gameplay mechanics.",
+      tech: "Unity, C#, Game Development",
+      link: "https://github.com/scKamui/subject-zero-game",
+    },
+    {
       title: "OfferTrail",
       description:
         "A web app to track internship and job applications, featuring status filters, calendar view, and a modern UI dashboard.",
