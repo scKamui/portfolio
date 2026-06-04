@@ -9,8 +9,8 @@ export default function Projects() {
     {
       title: "Subject Zero",
       description:
-        "A 2D zombie survival game built in Unity where players battle waves of enemies, complete objectives, and progress through the story. Features multiple zombie types, AI-driven enemy behavior, anti-clustering movement, wave progression, ranking systems, and survival gameplay mechanics.",
-      tech: "Unity, C#, Game Development",
+        "A zombie survival game built with Phaser 3 and JavaScript where players fight through waves of enemies while completing objectives and progressing through the story. The game features multiple zombie types with unique behaviors, a ranking system, wave-based progression, and a survival mode. I also implemented enemy AI, anti-clustering movement, shooting mechanics, and difficulty scaling to create a more engaging gameplay experience.",
+      tech: "Phaser 3, JavaScript, Game Development",
       link: "https://github.com/scKamui/subject-zero-game",
     },
     {
