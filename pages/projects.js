@@ -25,6 +25,7 @@ export default function Projects() {
       description:
         "A web app to track internship and job applications, featuring status filters, calendar view, and a modern UI dashboard.",
       tech: "PHP, MySQL, JavaScript, HTML, CSS",
+      liveUrl: "https://offertrail.xyz",
       githubUrl: "https://github.com/scKamui/OfferTrail",
     },
     {
