@@ -1,112 +1,218 @@
-// pages/projects.js
 import Navbar from "@/components/Navbar";
-import { motion } from "framer-motion";
 import Footer from "@/components/footer";
+import { motion } from "framer-motion";
+import { FaArrowRight, FaGithub } from "react-icons/fa";
+import Image from "next/image";
+
+// These two projects have live demos, so they get the larger layouts.
+const featured = [
+  {
+    id: "citeback",
+    number: "01",
+    title: "CiteBack",
+    type: "AI-powered academic assistant",
+    description:
+      "Upload research papers, ask questions in plain language, and trace every answer back to its source passage. Built to make dense academic work easier to navigate without sacrificing trust.",
+    tech: ["Python", "Streamlit", "RAG", "Generative AI"],
+    liveUrl: "https://citeback.streamlit.app",
+    githubUrl: "https://github.com/scKamui/academic-paper-assistant",
+    visual: "citeback-visual",
+  },
+  {
+    id: "offertrail",
+    number: "02",
+    title: "OfferTrail",
+    type: "Job application command center",
+    description:
+      "A focused web app for tracking internship and job applications through every stage, with status filters, a calendar view, and a clean dashboard that makes the search easier to manage.",
+    tech: ["Next.js", "TypeScript", "Clerk", "Neon Postgres", "Drizzle ORM"],
+    liveUrl: "https://offertrail.xyz",
+    githubUrl: "https://github.com/scKamui/OfferTrail",
+    visual: "offertrail-visual",
+  },
+];
+
+// The rest of my projects stay visible in the supporting grid.
+const otherProjects = [
+  {
+    number: "03",
+    title: "Subject Zero",
+    category: "Browser game",
+    description:
+      "A Phaser 3 zombie survival game with enemy AI, anti-clustering movement, wave progression, multiple zombie types, and difficulty scaling.",
+    tech: ["Phaser 3", "JavaScript", "Game Development"],
+    githubUrl: "https://github.com/scKamui/subject-zero-game",
+  },
+  {
+    number: "04",
+    title: "FocusPal",
+    category: "iOS productivity",
+    description:
+      "A distraction-free Pomodoro study timer designed around calm, focused work sessions.",
+    tech: ["Swift", "Xcode"],
+    githubUrl: "https://github.com/scKamui/FocusPal",
+  },
+  {
+    number: "05",
+    title: "SportsPro Support App",
+    category: "Support system",
+    description:
+      "A full-stack support system for managing customers, technicians, products, and service incidents.",
+    tech: ["PHP", "MySQL", "HTML / CSS"],
+    githubUrl: "https://github.com/scKamui/SportsPro-Technical-Support-System",
+  },
+  {
+    number: "06",
+    title: "Highway Escape",
+    category: "Android game",
+    description:
+      "A real-time Android driving game with responsive movement, traffic avoidance, collision detection, and survival gameplay.",
+    tech: ["Java", "Android Studio", "Android SDK"],
+    githubUrl: "https://github.com/scKamui/highway-escape-android",
+  },
+];
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "CiteBack",
-      description:
-        "An academic paper assistant that lets users upload research papers, ask questions about the content, and trace answers back to the source passages. I built it to make dense papers easier to work through without losing the citations behind each response.",
-      tech: "Python, Streamlit, RAG, Generative AI",
-      liveUrl: "https://citeback.streamlit.app",
-      githubUrl: "https://github.com/scKamui/academic-paper-assistant",
-    },
-    {
-      title: "Subject Zero",
-      description:
-        "A zombie survival game built with Phaser 3 and JavaScript where players fight through waves of enemies while completing objectives and progressing through the story. The game features multiple zombie types with unique behaviors, a ranking system, wave-based progression, and a survival mode. I also implemented enemy AI, anti-clustering movement, shooting mechanics, and difficulty scaling to create a more engaging gameplay experience.",
-      tech: "Phaser 3, JavaScript, Game Development",
-      githubUrl: "https://github.com/scKamui/subject-zero-game",
-    },
-    {
-      title: "OfferTrail",
-      description:
-        "A web app to track internship and job applications, featuring status filters, calendar view, and a modern UI dashboard.",
-      tech: "PHP, MySQL, JavaScript, HTML, CSS",
-      liveUrl: "https://offertrail.xyz",
-      githubUrl: "https://github.com/scKamui/OfferTrail",
-    },
-    {
-      title: "FocusPal",
-      description:
-        "A distraction-free study timer based on the Pomodoro Technique, designed for focus and calm productivity.",
-      tech: "Swift, Xcode",
-      githubUrl: "https://github.com/scKamui/FocusPal",
-    },
-    {
-      title: "SportsPro Support App",
-      description:
-        "A PHP and MySQL-based support system for managing customers, technicians, and product incidents.",
-      tech: "PHP, MySQL, HTML, CSS",
-      githubUrl: "https://github.com/scKamui/SportsPro-Technical-Support-System",
-    },
-    {
-      title: "Highway Escape",
-      description:
-        "An Android game where players dodge traffic and survive as long as possible, featuring collision detection, smooth movement, and real-time gameplay mechanics.",
-      tech: "Java, Android Studio, Android SDK",
-      githubUrl: "https://github.com/scKamui/highway-escape-android",
-    },
-  ];
-
   return (
-    <div className="bg-gradient-to-b from-gray-900 via-black to-gray-900 min-h-screen text-white">
+    <div className="site-page">
       <Navbar />
-      <main className="flex flex-col items-center text-center px-6 py-20">
-        <motion.h1
-          className="text-5xl font-extrabold mb-12 bg-gradient-to-r from-red-500 via-pink-500 to-purple-500 bg-clip-text text-transparent"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+      <main>
+        {/* This intro sets up the range of work on the page. */}
+        <section className="page-intro section-shell">
+          <motion.p
+            className="eyebrow"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            Selected work · 2024—2026
+          </motion.p>
+          <motion.h1
+            initial={{ opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55 }}
+          >
+            Work that moves from
+            <br />
+            <span>idea to interface.</span>
+          </motion.h1>
+          <p>
+            Full-stack products, AI experiments, mobile apps, and games—each
+            built to explore a real problem or sharpen a new skill.
+          </p>
+        </section>
+        {/* Featured projects include a screenshot, live demo, and source code. */}
+        <section
+          className="section-shell featured-list"
+          aria-label="Featured projects"
         >
-          MY PROJECTS
-        </motion.h1>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl w-full">
-          {projects.map((project, index) => (
-            <motion.div
-              key={index}
-              className="group bg-black/80 border border-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-red-600/40 transition duration-300 flex flex-col justify-between text-left"
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.2, duration: 0.6 }}
-              whileHover={{ scale: 1.03 }}
+          {featured.map((project, index) => (
+            <motion.article
+              id={project.id}
+              className={`featured-project ${index % 2 ? "is-reverse" : ""}`}
+              key={project.id}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.55 }}
             >
-              <div>
-                <h2 className="text-2xl font-bold mb-3 text-white">{project.title}</h2>
-                <p className="text-gray-300 mb-4 text-base leading-relaxed">{project.description}</p>
-                <p className="text-sm text-gray-400 italic mb-6">
-                  Tech Used: {project.tech}
-                </p>
+              <div className={`featured-visual ${project.visual}`}>
+                <span className="visual-index">{project.number}</span>
+                <div className="screenshot-frame">
+                  <div className="browser-dots">
+                    <i />
+                    <i />
+                    <i />
+                  </div>
+                  <div className="screenshot-image">
+                    <Image
+                      src={
+                        project.id === "citeback"
+                          ? "/citeback-landing.png"
+                          : "/offertrail-landing.png"
+                      }
+                      alt={`${project.title} landing page`}
+                      width={1280}
+                      height={720}
+                      sizes="(max-width: 800px) 100vw, 58vw"
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-wrap gap-3 opacity-100 translate-y-0 transition-all duration-300 md:opacity-0 md:translate-y-2 md:group-hover:opacity-100 md:group-hover:translate-y-0 md:group-focus-within:opacity-100 md:group-focus-within:translate-y-0">
-                {project.liveUrl && (
+              <div className="featured-copy">
+                <p className="project-type">{project.type}</p>
+                <h2>{project.title}</h2>
+                <p className="project-description">{project.description}</p>
+                <ul className="tag-list">
+                  {project.tech.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                <div className="project-actions">
                   <a
+                    className="button button-primary"
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-pink-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:scale-105 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-pink-400"
                   >
-                    Live Website ↗
+                    Live demo <FaArrowRight />
                   </a>
-                )}
-
-                {project.githubUrl && (
+                  <a
+                    className="button button-secondary"
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub /> GitHub
+                  </a>
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </section>
+        {/* Smaller cards keep every other project easy to browse. */}
+        <section className="section-shell more-work">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">More projects</p>
+              <h2>Still exploring. Still building.</h2>
+            </div>
+            <p className="section-note">
+              Four more builds across web, mobile, and games.
+            </p>
+          </div>
+          <div className="project-grid">
+            {otherProjects.map((project, index) => (
+              <motion.article
+                className="project-card"
+                key={project.title}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.45, delay: index * 0.06 }}
+              >
+                <div className="card-top">
+                  <span>{project.number}</span>
                   <a
                     href={project.githubUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center rounded-full border border-pink-500/60 px-5 py-2.5 text-sm font-semibold text-pink-400 transition hover:scale-105 hover:bg-pink-500/10 hover:text-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400"
+                    aria-label={`${project.title} on GitHub`}
                   >
-                    GitHub ↗
+                    <FaGithub />
                   </a>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+                </div>
+                <p className="project-type">{project.category}</p>
+                <h3>{project.title}</h3>
+                <p>{project.description}</p>
+                <ul className="tag-list">
+                  {project.tech.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </motion.article>
+            ))}
+          </div>
+        </section>
       </main>
       <Footer />
     </div>

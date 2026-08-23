@@ -1,25 +1,46 @@
-// components/Navbar.js
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { useRouter } from "next/router";
+
+// Keeping the links here makes the menu easy to update later.
+const links = [
+  ["Home", "/"],
+  ["Projects", "/projects"],
+  ["About", "/about"],
+  ["Contact", "/contact"],
+];
 
 export default function Navbar() {
+  const { pathname } = useRouter();
   return (
-    <motion.nav
-      className="bg-black/80 backdrop-blur-md text-white px-8 py-4 flex justify-between items-center shadow-lg sticky top-0 z-50"
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
-    >
-      <h1 className="text-2xl font-extrabold bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">
-        SAMI CHAUHAN
-      </h1>
-
-      <div className="space-x-8 text-lg font-medium">
-        <Link href="/" className="hover:text-red-400 transition duration-200">Home</Link>
-        <Link href="/projects" className="hover:text-red-400 transition duration-200">Projects</Link>
-        <Link href="/about" className="hover:text-red-400 transition duration-200">About</Link>
-        <Link href="/contact" className="hover:text-red-400 transition duration-200">Contact</Link>
-      </div>
-    </motion.nav>
+    <header className="site-header">
+      <nav className="nav-shell" aria-label="Primary navigation">
+        {/* My name always takes visitors back to the homepage. */}
+        <Link href="/" className="wordmark" aria-label="Sami Chauhan home">
+          <span className="wordmark-dot" />
+          Sami Chauhan
+        </Link>
+        {/* The active class shows which page is currently open. */}
+        <div className="nav-links">
+          {links.map(([label, href]) => (
+            <Link
+              key={href}
+              href={href}
+              className={`nav-link ${pathname === href ? "is-active" : ""}`}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+        {/* The resume opens in a new tab so the portfolio stays open. */}
+        <a
+          className="nav-resume"
+          href="/Tech_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume <span aria-hidden="true">↗</span>
+        </a>
+      </nav>
+    </header>
   );
 }

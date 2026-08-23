@@ -5,6 +5,7 @@ export default function Document() {
     <Html lang="en">
       <Head />
       <body className="antialiased">
+        {/* Next.js injects the current page and its scripts here. */}
         <Main />
         <NextScript />
       </body>

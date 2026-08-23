@@ -1,45 +1,42 @@
-// components/Footer.js
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import Link from "next/link";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="w-full mt-auto text-center text-gray-300 py-8 bg-black/70 backdrop-blur-md border-t border-pink-500/40">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Social Icons */}
-        <div className="flex justify-center gap-10 mb-4 text-2xl">
-          <a
-            href="https://github.com/scKamui"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-pink-400 transition-transform transform hover:scale-125"
-            title="GitHub"
-          >
-            <FaGithub />
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/schauhan2000"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-pink-400 transition-transform transform hover:scale-125"
-            title="LinkedIn"
-          >
-            <FaLinkedin />
-          </a>
-
-          <a
-            href="mailto:sjsc1224@gmail.com"
-            className="hover:text-pink-400 transition-transform transform hover:scale-125"
-            title="Email"
-          >
-            <FaEnvelope />
+    <footer className="footer">
+      <div className="footer-shell">
+        {/* This is the main call to action at the bottom of every page. */}
+        <div>
+          <p className="footer-kicker">
+            Have a project or opportunity in mind?
+          </p>
+          <a className="footer-email" href="mailto:sjsc1224@gmail.com">
+            Let’s talk.
           </a>
         </div>
-
-        {/* Copyright */}
-        <p className="text-sm text-gray-400">
-          © {new Date().getFullYear()} Sami Chauhan. All Rights Reserved.
-        </p>
+        {/* Social links and the copyright stay shared across the whole site. */}
+        <div className="footer-meta">
+          <div className="footer-links">
+            <a
+              href="https://github.com/scKamui"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/schauhan2000"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+            </a>
+            <Link href="/contact">Contact</Link>
+          </div>
+          <p>© {new Date().getFullYear()} Sami Chauhan</p>
+        </div>
       </div>
     </footer>
   );
