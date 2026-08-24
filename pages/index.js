@@ -21,17 +21,19 @@ export default function Home() {
         <section className="hero section-shell">
           <motion.div {...reveal}>
             <p className="eyebrow">
-              <span className="status-dot" /> Available for software
+              <span className="status-dot" /> Open to software development
               opportunities
             </p>
             <h1>
-              I build useful software
+              Building software that
               <br />
-              for the <span>real world.</span>
+              <span>solves real problems.</span>
             </h1>
             <p className="hero-copy">
               I’m Sami, a Computer Science student building practical software
-              with Python and JavaScript while exploring AI systems and tools.
+              with Python and JavaScript. I’m looking for opportunities to gain
+              real-world development experience, contribute to meaningful
+              projects, and keep growing as a developer.
             </p>
             <div className="hero-actions">
               <Link href="/projects" className="button button-primary">
