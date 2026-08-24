@@ -25,9 +25,9 @@ export default function Home() {
               opportunities
             </p>
             <h1>
-              Building software that
+              Building software
               <br />
-              <span>solves real problems.</span>
+              that <span>solves real problems.</span>
             </h1>
             <p className="hero-copy">
               I’m Sami, a Computer Science student building practical software
@@ -56,7 +56,7 @@ export default function Home() {
           >
             <p className="aside-label">Currently</p>
             <p className="aside-title">
-              Building at the intersection of product and engineering.
+              Turning ideas into practical, working software.
             </p>
             <div className="aside-rule" />
             <dl className="quick-facts">
