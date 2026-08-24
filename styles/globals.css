@@ -685,19 +685,13 @@ textarea {
 .about-hero {
   padding: 120px 0 90px;
   display: grid;
-  grid-template-columns: 1.4fr 0.6fr;
+  grid-template-columns: 1fr;
   gap: 8%;
   align-items: end;
   border-bottom: 1px solid var(--line);
 }
 .about-hero h1 {
   font-size: clamp(54px, 6.5vw, 88px);
-}
-.about-lede {
-  color: #aaa9a3;
-  line-height: 1.7;
-  font-size: 17px;
-  margin-bottom: 35px;
 }
 .about-content {
   display: grid;

@@ -23,16 +23,6 @@ export default function About() {
               <span>Growing by doing.</span>
             </h1>
           </motion.div>
-          <motion.p
-            className="about-lede"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.15, duration: 0.55 }}
-          >
-            I’m a Computer Science student who enjoys turning ideas into working
-            software—and working through the hard parts that make the result
-            better.
-          </motion.p>
         </section>
 
         {/* The image and longer story give more detail about me and my goals. */}

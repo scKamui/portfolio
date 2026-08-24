@@ -24,8 +24,8 @@ export default function Contact() {
             <span>worth using.</span>
           </h1>
           <p>
-            Have an internship, project, or idea you’d like to discuss? Send a
-            note and I’ll get back to you.
+            Have a job opportunity, internship, project, or idea you’d like to
+            discuss? Send me a note and I’ll get back to you.
           </p>
           <a className="contact-email" href="mailto:sjsc1224@gmail.com">
             sjsc1224@gmail.com

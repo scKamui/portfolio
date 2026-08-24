@@ -81,7 +81,7 @@ export default function Home() {
           <div className="section-shell focus-grid">
             <div className="focus-intro">
               <p className="eyebrow">Current focus</p>
-              <p>Tools I use and areas I’m actively exploring.</p>
+              <p>What I’m building with and learning right now.</p>
             </div>
             <div className="focus-group">
               <span>Core languages</span>
@@ -184,7 +184,7 @@ export default function Home() {
             <div className="home-about-copy">
               <p>
                 I like taking ideas from a rough first sketch to something
-                people can actually use—learning whatever the project demands
+                people can actually use, learning whatever the project demands
                 along the way.
               </p>
               <Link href="/about" className="text-link">
